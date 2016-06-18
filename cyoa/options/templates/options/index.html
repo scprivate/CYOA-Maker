@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<head>
+<title>Transcendance</title>
+<link rel="stylesheet" type="text/css" href="{% static 'options/layout.css' %}" />
+<link rel="icon"
+	type="image/png"
+	href="{% static 'options/icon.png' %}">
+</head>
+
+<body>
+<div class = "holders" id = "introduction">
+	{% for introduction in introduction %}
+		{{introduction.title}}<br>
+		<span id="introdescription">{{introduction.description}}</span>
+	{% endfor %}
+</div>
+
+{% if content_list %}
+	{% for section in content_list %}
+	{% if section.content_set.all %}
+	<div class="holders">
+	<p>	{{section.field_char}}
+		{% if section.description %}<br>{{section.description}}{% endif %}
+	</p>
+	<table class="tables">
+		<tr>
+			{% for content in section.content_set.all %}
+				<td><div class= "options"><img class="imageholder" src="{{content.Image_ref}}"/><span class="title">{{content.description}}</span></img>
+					<div class="textholder">{{content.field_text|linebreaks}}</div>
+				</td></div>
+				{% if not forloop.last and forloop.counter|divisibleby:5 %}
+				</tr>
+				<tr>
+				{% endif %}
+			{% endfor %}
+		</tr>
+	</table>
+	</div>
+	{% endif %}
+	{% endfor %}
+{% endif %}
+</body>
