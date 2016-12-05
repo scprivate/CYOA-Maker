@@ -1,4 +1,4 @@
-# Amridell's Easy to Use CYOA creator (AKA how I make CYOAs)
+# Ogkloo's Easy to Use CYOA creator (AKA how I make CYOAs)
 I can't use photoshop, so I did a few CYOAs in HTML. Eventually I thought to myself "Hey, I should automate this". I felt like an idiot for doing all that work over and over in a text editor.
 
 # How to use this
