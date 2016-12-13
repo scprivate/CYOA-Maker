@@ -8,6 +8,8 @@ Installing Python (Thank you Derek Banas): https://www.youtube.com/watch?v=EU8L9
 
 Installing Django (Thank CodingEntrepreneurs for this because I don't remember how to explain this one): https://www.youtube.com/watch?v=QhevHKBy7Hc
 
+(Alternatively, if you can use pip, do. sudo pip install django should install everything you need, and you can hunt down the rest of the packages if you need them. I didn't use anything special though so it shouldn't be necessary other than django)
+
 First you'll need to bring up the server. Download the repo, copy it so you don't have to come back and redownload, then navigate into your copied directory.
 
 Next, shift-right-click in the directory. Click "Open command prompt here".
